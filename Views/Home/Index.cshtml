@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<Listing>;
+
+<div class="text-center">
+    <h1>Your Recomendations:</h1>
+    @{
+       foreach(Listing item in Model) {
+           <div>
+                <a href="@Url.Action("Listing", "Listing", new { ListingID = item.ListingID })">@item.Name</a>
+                $@item.Price
+           </div>
+       }
+    }
+</div>
