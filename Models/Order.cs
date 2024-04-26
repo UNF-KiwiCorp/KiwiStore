@@ -1,4 +1,4 @@
-﻿namespace KiwiCorp.Models {
+﻿namespace KiwiCorpSite.Models {
 	public class Order {
 		public String OrderID { get; set; }
 

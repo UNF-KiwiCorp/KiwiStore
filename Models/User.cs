@@ -1,4 +1,4 @@
-﻿namespace KiwiCorp.Models {
+﻿namespace KiwiCorpSite.Models {
 	public class User {
 		public int UserID { get; set; }
 

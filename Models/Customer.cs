@@ -1,4 +1,4 @@
-﻿namespace KiwiCorp.Models {
+﻿namespace KiwiCorpSite.Models {
 	public class Customer {
 		public String CustomerID { get; set; }
 
