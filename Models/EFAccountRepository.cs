@@ -25,7 +25,7 @@ namespace KiwiCorpSite.Models
 
 
                     dbEntry.LegalName = account.LegalName;
-                    dbEntry.UserName = account.UserName;
+                    dbEntry.Username = account.Username;
                     dbEntry.Email = account.Email;
                     dbEntry.cardNumber = account.cardNumber;
                     dbEntry.cvc = account.cvc;

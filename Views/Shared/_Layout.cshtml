@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using KiwiCorpSite.Controllers
+<!DOCTYPE html>
+@{
+    Account acc = AccountController.ActiveAccount;
+    string name = "New Customer";
+    if (acc != null) name = acc.Username;
+}
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,6 +30,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="LogInPage">@name</a>
                         </li>
                     </ul>
                 </div>

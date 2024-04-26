@@ -22,6 +22,18 @@ namespace KiwiCorpSite.Controllers
             return null;
         }
 
+        public Account GetAccountByUsername(string username)
+        {
+            foreach (Account acc in repository.Accounts)
+            {
+                if (acc.Username == username)
+                {
+                    return acc;
+                }
+            }
+            return null;
+        }
+
         public ViewResult AccountList() {
             return View(repository.Accounts);
         }
@@ -51,10 +63,17 @@ namespace KiwiCorpSite.Controllers
             }
         }
 
-        public ViewResult SignIn(Account acc) {
-            ActiveAccount = acc;
-            Console.WriteLine(ActiveAccount.UserName + " is the active account");
+        public ViewResult SignIn(string Username, string Password) {
+            Console.WriteLine(Username + ", " + Password);
+            Account acc = GetAccountByUsername(Username);
+            if (acc == null || acc.Password != Password) return View("LogInPage");
+            else ActiveAccount = acc;
+            Console.WriteLine(ActiveAccount.Username + " is the active account");
             return View("AccountList", repository.Accounts);
+        }
+
+        public ViewResult LogInPage() {
+            return View();
         }
 
         [HttpPost]
