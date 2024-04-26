@@ -10,6 +10,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddTransient<IListingRepository, TestListingRepo>();
 builder.Services.AddTransient<IAccountRepository, EFAccountRepository>();
 builder.Services.AddTransient<ITransactionRepository, EFTransactionRepository>();
 
