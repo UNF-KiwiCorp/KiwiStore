@@ -42,7 +42,7 @@ namespace KiwiCorpSite.Controllers
             for (int i = 0; i < cart.Count; i++) {
                 Console.WriteLine("Item {0} : {1} ", i, cart[i].Name);
             }
-            return View("Browse");
+            return View("Cart", cart);
         }
 
         public ViewResult AccountList() {
@@ -90,10 +90,16 @@ namespace KiwiCorpSite.Controllers
         [HttpPost]
         public ViewResult NewAccount(Account acc)
         {
+            if (!ModelState.IsValid) return View("AccountCreation");
             Random rand = new Random(System.DateTime.Now.Millisecond);
             acc.ReferalCode = rand.Next(100000000, 999999999).ToString();
             repository.SaveAccount(acc);
             return View("AccountList", repository.Accounts);
+        }
+
+        public ViewResult Cart() {
+            return View(cart);
+            
         }
     }
 }

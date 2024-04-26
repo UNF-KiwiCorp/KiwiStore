@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using KiwiCorpSite.Models;
 
 namespace KiwiCorpSite.Models
 {
@@ -9,5 +10,6 @@ namespace KiwiCorpSite.Models
         { }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<KiwiCorpSite.Models.Listing>? Listing { get; set; }
     }
 }

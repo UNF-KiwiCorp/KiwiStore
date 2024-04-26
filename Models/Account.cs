@@ -16,7 +16,7 @@
         public string expirationDate { get; set; }
 
 
-        public string ReferalCode { get; set; }
+        public string? ReferalCode { get; set; }
         public string? AppliedReferal { get; set; }
     }
 }
