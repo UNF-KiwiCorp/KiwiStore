@@ -39,12 +39,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Listing/Browse.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGluZ1xCcm93c2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Listing/Listing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGluZ1xMaXN0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/Browse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJyb3dzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/Error.cshtml]

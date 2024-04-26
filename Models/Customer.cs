@@ -5,6 +5,5 @@
 		public int CardNumber { get; set; }
 		public int CVC { get; set; }
 		public String Expiration { get; set; }
-
 	}
 }
