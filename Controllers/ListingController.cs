@@ -19,6 +19,10 @@ namespace KiwiCorpSite.Controllers
             return View(listing);
         }
 
+        public IActionResult Browse() {
+            return View(repo.Listings);
+        }
+
         private Listing GetListingById(int ID)
         {
             Listing listing = null;
