@@ -1,31 +1,32 @@
-﻿using KiwiCorp.Models;
+﻿using KiwiCorpSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace KiwiCorp.Controllers {
-	public class HomeController : Controller {
-		//private readonly ILogger<HomeController> _logger;
-		private IListingRepository repo;
+namespace KiwiCorpSite.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
 
-		public HomeController(IListingRepository repo) {
-			this.repo = repo;
-		}
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
 
-		//public ViewResult Index() => View(repo.Listings);
+        public IActionResult Index()
+        {
+            return View();
+        }
 
-		
-		public IActionResult Index() {
-			return View(repo.Listings);
-		}
-		
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
-		public IActionResult Privacy() {
-			return View();
-		}
-
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error() {
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-		}
-	}
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
 }

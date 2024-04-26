@@ -1,4 +1,4 @@
-﻿namespace KiwiCorp.Models {
+﻿namespace KiwiCorpSite.Models {
 	public class Cart {
 		public String CustomerID { get; set; }
 

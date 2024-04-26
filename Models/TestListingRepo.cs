@@ -1,4 +1,6 @@
-﻿namespace KiwiCorp.Models {
+﻿using KiwiCorpSite.Models;
+
+namespace KiwiCorpSite.Models {
 	public class TestListingRepo : IListingRepository {
 		public IEnumerable<Listing> Listings => new List<Listing> {
 			new Listing {
