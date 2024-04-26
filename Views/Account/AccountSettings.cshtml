@@ -1,0 +1,60 @@
+﻿@model KiwiCorpSite.Models.Account
+@{
+    ViewData["Title"] = "AccountSettings";
+    
+}
+
+<h1>AccountSettings</h1>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="SettingsForm" asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="LegalName" class="control-label"></label>
+                <input asp-for="LegalName" class="form-control"/>
+                <span asp-validation-for="LegalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cardNumber" class="control-label"></label>
+                <input asp-for="cardNumber" class="form-control" />
+                <span asp-validation-for="cardNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cvc" class="control-label"></label>
+                <input asp-for="cvc" class="form-control" />
+                <span asp-validation-for="cvc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="expirationDate" class="control-label"></label>
+                <input asp-for="expirationDate" class="form-control" />
+                <span asp-validation-for="expirationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" asp-controller="Account" asp-action="SignIn" value="Sign in" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AccountList">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

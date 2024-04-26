@@ -1,16 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model IEnumerable<Listing>;
 
 <div class="text-center">
-    <h1>Your Recomendations:</h1>
-    @{
-       foreach(Listing item in Model) {
-           <div>
-                <a href="@Url.Action("Listing", "Listing", new { ListingID = item.ListingID })">@item.Name</a>
-                $@item.Price
-           </div>
-       }
-    }
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a asp-controller="Account" asp-action="AccountList"> Account List</a>
 </div>

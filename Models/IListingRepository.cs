@@ -1,5 +1,9 @@
-﻿namespace KiwiCorp.Models {
-	public interface IListingRepository {
-		IEnumerable<Listing> Listings { get; }
-	}
+﻿using System.Reflection;
+
+namespace KiwiCorpSite.Models
+{
+    public interface IListingRepository
+    {
+        IEnumerable<Listing> Listings { get; }
+    }
 }
