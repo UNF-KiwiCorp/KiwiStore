@@ -6,6 +6,9 @@ namespace KiwiCorpSite.Controllers
     public class AccountController : Controller
     {
         private IAccountRepository repository;
+
+        public static List<Listing> cart = new List<Listing>();
+
         public static Account ActiveAccount;
         public AccountController(IAccountRepository repo)
         {
@@ -32,6 +35,14 @@ namespace KiwiCorpSite.Controllers
                 }
             }
             return null;
+        }
+
+        public ViewResult AddToCart(Listing listing) {
+            cart.Add(listing);
+            for (int i = 0; i < cart.Count; i++) {
+                Console.WriteLine("Item {0} : {1} ", i, cart[i].Name);
+            }
+            return View("Browse");
         }
 
         public ViewResult AccountList() {
@@ -63,10 +74,10 @@ namespace KiwiCorpSite.Controllers
             }
         }
 
-        public ViewResult SignIn(string Username, string Password) {
-            Console.WriteLine(Username + ", " + Password);
-            Account acc = GetAccountByUsername(Username);
-            if (acc == null || acc.Password != Password) return View("LogInPage");
+        public ViewResult SignIn(Account attempt) {
+            Console.WriteLine(attempt.Username + ", " + attempt.Password);
+            Account acc = GetAccountByUsername(attempt.Username);
+            if (acc == null || acc.Password != attempt.Password) return View("LogInPage");
             else ActiveAccount = acc;
             Console.WriteLine(ActiveAccount.Username + " is the active account");
             return View("AccountList", repository.Accounts);
