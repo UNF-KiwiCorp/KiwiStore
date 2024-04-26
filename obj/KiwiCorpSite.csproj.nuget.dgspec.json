@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\WinForms\\KiwiCorpSite\\KiwiCorpSite.csproj": {}
+    "C:\\Users\\steve\\source\\repos\\KiwiStore-JoshCodeV2\\KiwiStore-JoshCodeV2\\KiwiCorpSite.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\WinForms\\KiwiCorpSite\\KiwiCorpSite.csproj": {
+    "C:\\Users\\steve\\source\\repos\\KiwiStore-JoshCodeV2\\KiwiStore-JoshCodeV2\\KiwiCorpSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\WinForms\\KiwiCorpSite\\KiwiCorpSite.csproj",
+        "projectUniqueName": "C:\\Users\\steve\\source\\repos\\KiwiStore-JoshCodeV2\\KiwiStore-JoshCodeV2\\KiwiCorpSite.csproj",
         "projectName": "KiwiCorpSite",
-        "projectPath": "D:\\Projects\\WinForms\\KiwiCorpSite\\KiwiCorpSite.csproj",
-        "packagesPath": "C:\\Users\\quick\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\WinForms\\KiwiCorpSite\\obj\\",
+        "projectPath": "C:\\Users\\steve\\source\\repos\\KiwiStore-JoshCodeV2\\KiwiStore-JoshCodeV2\\KiwiCorpSite.csproj",
+        "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\steve\\source\\repos\\KiwiStore-JoshCodeV2\\KiwiStore-JoshCodeV2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Apps\\Visual Studio\\Packages\\NuGetPackages"
+          "C:\\Users\\steve\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\quick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -92,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.419\\RuntimeIdentifierGraph.json"
         }
       }
     }
