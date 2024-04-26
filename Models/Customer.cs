@@ -6,7 +6,5 @@
 		public int CVC { get; set; }
 		public String Expiration { get; set; }
 
-		public String ReferalCode { get; set; }
-		public String AppliedReferal { get; set; }
 	}
 }

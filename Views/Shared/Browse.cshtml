@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Views/Shared/Browse.cshtml
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
@@ -22,3 +23,29 @@
         </table>
     </body>
 </div>
+=======
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<Listing>;
+<head>
+    	<link rel="stylesheet" href="Listings.css">
+</head>
+<body text-align=center>
+    <div class="text-center">
+        <h1>Your Recomendations:</h1>
+        <table align=center, border = 1px solid black>
+                @{
+                    foreach(Listing item in Model) {                   
+                        <tr>
+                            <td>
+                                <a href="@Url.Action("Listing", "Listing", new { ListingID = item.ListingID })">@item.Name</a>
+                                $@item.Price
+                            </td>
+                        </tr>
+                    }
+                }
+        </table>
+    </div>
+</body>
+>>>>>>> 27dea91e9149e17324c30eafa4696d0a0c66813e:Views/Listing/Browse.cshtml

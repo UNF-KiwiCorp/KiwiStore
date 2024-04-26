@@ -14,5 +14,9 @@
         public string cardNumber { get; set; }
         public int cvc { get; set; }
         public string expirationDate { get; set; }
+
+
+        public string ReferalCode { get; set; }
+        public string? AppliedReferal { get; set; }
     }
 }

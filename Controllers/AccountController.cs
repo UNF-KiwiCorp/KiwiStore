@@ -90,6 +90,8 @@ namespace KiwiCorpSite.Controllers
         [HttpPost]
         public ViewResult NewAccount(Account acc)
         {
+            Random rand = new Random(System.DateTime.Now.Millisecond);
+            acc.ReferalCode = rand.Next(100000000, 999999999).ToString();
             repository.SaveAccount(acc);
             return View("AccountList", repository.Accounts);
         }
