@@ -5,9 +5,9 @@
 <head>
     	<link rel="stylesheet" href="Listings.css">
 </head>
-<div class="text-center">
-    <h1>Your Recomendations:</h1>
-    <body text-align=center>
+<body text-align=center>
+    <div class="text-center">
+        <h1>Your Recomendations:</h1>
         <table align=center, border = 1px solid black>
                 @{
                     foreach(Listing item in Model) {                   
@@ -20,5 +20,5 @@
                     }
                 }
         </table>
-    </body>
-</div>
+    </div>
+</body>
