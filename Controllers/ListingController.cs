@@ -7,6 +7,7 @@ namespace KiwiCorpSite.Controllers
     public class ListingController : Controller
     {
         private IListingRepository repo;
+        private ITransactionRepository transactionRepository;
 
         public ListingController(IListingRepository repo)
         {
@@ -24,7 +25,13 @@ namespace KiwiCorpSite.Controllers
         }
 
         public IActionResult CreateListing() {
+            if (AccountController.ActiveAccount == null) return View("LogInPage");
             return View();
+        }
+
+        public ViewResult SubmitListing(Listing newListing) {
+            repo.NewListing(newListing);
+            return View("Browse", repo.Listings);
         }
 
         private Listing GetListingById(int ID)

@@ -45,7 +45,6 @@ namespace KiwiCorpSite.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ReferalCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
@@ -68,6 +67,36 @@ namespace KiwiCorpSite.Migrations
                     b.ToTable("Accounts");
                 });
 
+            modelBuilder.Entity("KiwiCorpSite.Models.Listing", b =>
+                {
+                    b.Property<int>("ListingID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ListingID"));
+
+                    b.Property<int>("CustomerID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Grade")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.HasKey("ListingID");
+
+                    b.ToTable("Listings");
+                });
+
             modelBuilder.Entity("KiwiCorpSite.Models.Transaction", b =>
                 {
                     b.Property<int>("Id")
@@ -87,8 +116,8 @@ namespace KiwiCorpSite.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ItemPrice")
-                        .HasColumnType("int");
+                    b.Property<double>("ItemPrice")
+                        .HasColumnType("float");
 
                     b.Property<bool>("Refunded")
                         .HasColumnType("bit");

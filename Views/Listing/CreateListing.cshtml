@@ -1,7 +1,8 @@
 ﻿@model KiwiCorpSite.Models.Listing
-
+@using KiwiCorpSite.Controllers;
 @{
     ViewData["Title"] = "View";
+    Account ActiveAccount = AccountController.ActiveAccount;
 }
 
 <h1>View</h1>
@@ -10,7 +11,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="View">
+        <form asp-action="SubmitListing">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -27,6 +28,7 @@
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
+            <input asp-for="CustomerID" type="hidden" value="@ActiveAccount.Id" />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

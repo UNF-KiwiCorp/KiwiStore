@@ -4,6 +4,10 @@ namespace KiwiCorpSite.Models
 {
     public interface IListingRepository
     {
-        IEnumerable<Listing> Listings { get; }
+        public IEnumerable<Listing> Listings { get; }
+
+        public void NewListing(Listing newListing);
+
+        public void EditListing(Listing newData);
     }
 }

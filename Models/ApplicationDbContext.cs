@@ -10,6 +10,7 @@ namespace KiwiCorpSite.Models
         { }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-        public DbSet<KiwiCorpSite.Models.Listing>? Listing { get; set; }
+        public DbSet<Listing>? Listings { get; set; }
+
     }
 }
