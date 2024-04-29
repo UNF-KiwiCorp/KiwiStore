@@ -15,4 +15,14 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #D1FFBD;
 }
+
+
+.custom-navbar-color {
+    background-color: #50C878;
+}
+
+.navbar-nav > li > a {
+    font-family: 'Century Gothic';
+    font-weight: bold;
