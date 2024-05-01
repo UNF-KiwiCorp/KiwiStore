@@ -1,8 +1,11 @@
 ﻿@model List<Listing>
+@using KiwiCorpSite.Controllers
+@using KiwiCorpSite.Models
 
 @{
     ViewData["Title"] = "Cart";
     double sum = 0.0;
+    Account acc = AccountController.ActiveAccount;
 }
 
 <h1>Cart</h1>
@@ -57,7 +60,15 @@
             </td>
         </tr>
 }
-    <div> Cart Price: $@sum</div>
+    @if(acc.CreditedFunds > 0) {
+        <div> Credit: $@acc.CreditedFunds</div>
+            <div> Total: $@{
+                    sum -= acc.CreditedFunds;
+                }</div>
+    } else {
+        <div> Total: $@sum</div>  
+    }
+        
     <a asp-controller="Account" asp-action="Checkout">Checkout</a>
     </tbody>
 </table>

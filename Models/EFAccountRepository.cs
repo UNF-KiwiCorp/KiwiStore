@@ -22,14 +22,14 @@ namespace KiwiCorpSite.Models
                 Account dbEntry = context.Accounts.FirstOrDefault(a => a.Id == account.Id);
                 if (dbEntry != null)
                 {
-
-
                     dbEntry.LegalName = account.LegalName;
                     dbEntry.Username = account.Username;
                     dbEntry.Email = account.Email;
                     dbEntry.cardNumber = account.cardNumber;
                     dbEntry.cvc = account.cvc;
                     dbEntry.expirationDate = account.expirationDate;
+                    dbEntry.AppliedReferal = account.AppliedReferal;
+                    dbEntry.CreditedFunds = account.CreditedFunds;
                 }
             }
             context.SaveChanges();

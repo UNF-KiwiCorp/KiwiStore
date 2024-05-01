@@ -39,6 +39,17 @@ namespace KiwiCorpSite.Controllers
             return null;
         }
 
+        public Account GetAccountByReferal(string referal) {
+            foreach (Account acc in repository.Accounts) {
+                if (acc.ReferalCode == referal) {
+                    Console.WriteLine("Found account by referal");
+                    return acc;
+                }
+            }
+            Console.WriteLine("Failed to find account by referal");
+            return null;
+        }
+
         public ViewResult AddToCart(Listing listing) {
             cart.Add(listing);
             for (int i = 0; i < cart.Count; i++) {
@@ -52,6 +63,20 @@ namespace KiwiCorpSite.Controllers
                 transactionRepository.NewTransaction(ActiveAccount, item);
             }
             cart.Clear();
+
+            // Check if the user has a referal applied that corresponds to a real user
+            Account referee = ActiveAccount;
+            if (referee.AppliedReferal != null && GetAccountByReferal(referee.AppliedReferal) != null) {
+                // If the referal code corresponds to a real user, credit the referee $20 and the referer $30
+                referee.CreditedFunds += 20;
+                Account referer = GetAccountByReferal(referee.AppliedReferal);
+                referer.CreditedFunds += 30;
+                referee.AppliedReferal = null;
+                repository.SaveAccount(referee);
+                repository.SaveAccount(referer);
+                Console.WriteLine("Referal complete");
+            }
+
             return View("AccountList", repository.Accounts);
         }
 

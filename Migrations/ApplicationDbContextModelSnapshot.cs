@@ -32,6 +32,9 @@ namespace KiwiCorpSite.Migrations
                     b.Property<string>("AppliedReferal")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("CreditedFunds")
+                        .HasColumnType("float");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

@@ -18,5 +18,7 @@
 
         public string? ReferalCode { get; set; }
         public string? AppliedReferal { get; set; }
+
+        public double CreditedFunds { get; set; }
     }
 }
