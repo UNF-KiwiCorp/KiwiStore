@@ -115,7 +115,7 @@ namespace KiwiCorpSite.Controllers
             if (acc == null || acc.Password != attempt.Password) return View("LogInPage");
             else ActiveAccount = acc;
             Console.WriteLine(ActiveAccount.Username + " is the active account");
-            return View("AccountList", repository.Accounts);
+            return View("Index");
         }
 
         public ViewResult LogInPage() {
@@ -140,6 +140,11 @@ namespace KiwiCorpSite.Controllers
         public ViewResult TransactionHistory() {
             if (ActiveAccount == null) return View("LogInPage");
             return View(transactionRepository.Transactions);
+        }
+
+        public ViewResult Refund(int id) {
+            transactionRepository.RefundTransaction(id);
+            return View("TransactionHistory", transactionRepository.Transactions);
         }
     }
 }
