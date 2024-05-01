@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2>Buy and Sell Physical Media with Ease</h2>
+    <h4>Finding What You've Always Wanted</h4>
+    <body>
+        At KiwiStore, we help you find preowned video games, DVDs, CDs, records, cassete tapes, and more.
+        Using our tools, you can easilly find the games you've wanted but never got to buy, or your favorite songs and movies.
+        Whether you are a casual fan or a hardcore collector, KiwiStore is the place to shop!
+    </body>
+    <h4>Selling What You're Done With</h4>
+    <body>
+        Finished that game yet? Are all those songs stuck in your head? With KiwiStore, you can easilly sell your phycical media devices to 
+        other users. Simply describe the item, upload pictures, and name a price, and you have a listing!
+    </body>
+    <br/>
+    <a class="btn" asp-controller="Account" asp-action="AccountList">Account List</a>
+    <a class="btn" asp-controller="Account" asp-action="TransactionHistory">TransactionHistory</a>
+    <a class="btn" asp-controller="Listing" asp-action="Browse">Browse Listings</a>
+    <a class="btn" asp-controller="Listing" asp-action="CreateListing">Create Listing</a>
+</div>

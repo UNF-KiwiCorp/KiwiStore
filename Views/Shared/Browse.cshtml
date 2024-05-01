@@ -1,4 +1,5 @@
 @using System;
+@using KiwiCorpSite.Models;
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -15,16 +16,16 @@
                     int i = 0;
                     foreach(Listing item in Model) {
                         i++;
-                        <div class="card" style="width: 18rem;">
-                            <img src="data: image; base64, @System.Convert.ToBase64String(item.Picture)" class="card-img-top" alt="..."/>
-                            <div class="card-body">
-                                <h5 class="card-title">@item.Name</h5>
-                                <p class="card-text">$@item.Description</p>
-                                <a href="@Url.Action("Listing", "Listing", new { ListingID = item.ListingID })" class="btn btn-primary">$@item.Price</a>
+                            <div class="card" style="width: 18rem;">
+                                <img src="data: image; base64, @System.Convert.ToBase64String(item.Picture)" class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">@item.Name</h5>
+                                    <p class="card-text">@item.Description</p>
+                                    <a href="@Url.Action("Listing", "Listing", new { ListingID = item.ListingID })" class="btn btn-primary">$@item.Price</a>
+                                </div>
                             </div>
-                        </div>
                         if(i > 2) {
-                            <br/>
+                                <br/>
                         }
                     }
                 }
