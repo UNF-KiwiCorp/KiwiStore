@@ -38,6 +38,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="LogInPage">@name</a>
                         </li>
+                        @if(acc != null) {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Cart">Cart (@AccountController.cart.Count)</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
