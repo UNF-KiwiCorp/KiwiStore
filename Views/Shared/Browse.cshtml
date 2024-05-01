@@ -10,16 +10,16 @@
     <div class="text-center">
         <h1>Your Recomendations:</h1>
         <body class="text-start">
-        
+           <div class="row row-cols-3">
                 @{
                     int i = 0;
                     foreach(Listing item in Model) {
                         i++;
-                        <div class="card" style="width: 18rem;">
+                        <div class="col card" style="width: 18rem;">
                             <img src="data: image; base64, @System.Convert.ToBase64String(item.Picture)" class="card-img-top" alt="..."/>
                             <div class="card-body">
                                 <h5 class="card-title">@item.Name</h5>
-                                <p class="card-text">$@item.Description</p>
+                                <p class="card-text">@item.Description</p>
                                 <a href="@Url.Action("Listing", "Listing", new { ListingID = item.ListingID })" class="btn btn-primary">$@item.Price</a>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
                         }
                     }
                 }
-        
+            </div>
         </body>
     </div>
     <a asp-controller="Account" asp-action="Cart"> Go to Cart</a>
