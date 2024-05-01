@@ -30,6 +30,9 @@ namespace KiwiCorpSite.Controllers
         }
 
         public ViewResult SubmitListing(Listing newListing) {
+            MemoryStream mem = new MemoryStream();
+            newListing.image.OpenReadStream().CopyTo(mem);
+            newListing.Picture = mem.GetBuffer();
             repo.NewListing(newListing);
             return View("Browse", repo.Listings);
         }

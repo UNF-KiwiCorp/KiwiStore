@@ -60,11 +60,10 @@
             </td>
         </tr>
 }
-    @if(acc.CreditedFunds > 0) {
+    @if(acc != null && acc.CreditedFunds > 0) {
+        sum -= acc.CreditedFunds;
         <div> Credit: $@acc.CreditedFunds</div>
-            <div> Total: $@{
-                    sum -= acc.CreditedFunds;
-                }</div>
+            <div> Total: $@sum</div>
     } else {
         <div> Total: $@sum</div>  
     }

@@ -92,6 +92,9 @@ namespace KiwiCorpSite.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte[]>("Picture")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<double>("Price")
                         .HasColumnType("float");
 

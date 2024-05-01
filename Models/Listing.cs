@@ -10,7 +10,9 @@ namespace KiwiCorpSite.Models
 		public String Name { get; set; }
         public String Description { get; set; }
 		[NotMapped]
-        public Image image { get; set; }
+        public IFormFile image { get; set; }
+
+        public byte[]? Picture { get; set; }
 		public double Price { get; set; }
         public int Grade { get; set; }
     }
