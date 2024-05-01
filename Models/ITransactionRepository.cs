@@ -4,7 +4,7 @@
     {
         IEnumerable<Transaction> Transactions { get; }
 
-        public void NewTransaction(Account Buyer, Account Seller);
+        public void NewTransaction(Account Buyer, Listing item);
         public void RefundTransaction(int id);
     }
 }

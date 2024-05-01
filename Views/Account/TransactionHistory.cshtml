@@ -1,0 +1,67 @@
+﻿@model IEnumerable<KiwiCorpSite.Models.Transaction>
+@using KiwiCorpSite.Controllers;
+@{
+    ViewData["Title"] = "TransactionHistory";
+    Account ActiveAccount = AccountController.ActiveAccount;
+}
+
+<h1>TransactionHistory</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Refunded)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            if (item.BuyerId == ActiveAccount.Id || item.SellerId == ActiveAccount.Id)
+            {
+                <tr>
+                    <td>
+                @Html.DisplayFor(modelItem => item.BuyerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Refunded)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Request Refund</a> |
+            </td>
+        </tr>
+        }
+}
+    </tbody>
+</table>

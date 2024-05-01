@@ -7,7 +7,7 @@
         public int SellerId { get; set; }
 
         public string ItemName { get; set; }
-        public int ItemPrice { get; set; }
+        public double ItemPrice { get; set; }
         public string Date { get; set; }
 
         public bool Refunded { get; set; }

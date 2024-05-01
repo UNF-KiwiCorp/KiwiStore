@@ -6,13 +6,15 @@ namespace KiwiCorpSite.Controllers
     public class AccountController : Controller
     {
         private IAccountRepository repository;
+        private ITransactionRepository transactionRepository;
 
         public static List<Listing> cart = new List<Listing>();
 
         public static Account ActiveAccount;
-        public AccountController(IAccountRepository repo)
+        public AccountController(IAccountRepository repo, ITransactionRepository transRepo)
         {
             repository = repo;
+            transactionRepository = transRepo;
         }
         
         public Account GetAccountById(int id) {
@@ -43,6 +45,14 @@ namespace KiwiCorpSite.Controllers
                 Console.WriteLine("Item {0} : {1} ", i, cart[i].Name);
             }
             return View("Cart", cart);
+        }
+
+        public ViewResult Checkout() {
+            foreach (Listing item in cart) {
+                transactionRepository.NewTransaction(ActiveAccount, item);
+            }
+            cart.Clear();
+            return View("AccountList", repository.Accounts);
         }
 
         public ViewResult AccountList() {
@@ -100,6 +110,11 @@ namespace KiwiCorpSite.Controllers
         public ViewResult Cart() {
             return View(cart);
             
+        }
+
+        public ViewResult TransactionHistory() {
+            if (ActiveAccount == null) return View("LogInPage");
+            return View(transactionRepository.Transactions);
         }
     }
 }
