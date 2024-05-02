@@ -5,20 +5,22 @@ namespace KiwiCorpSite.Controllers
 {
     public class AccountController : Controller
     {
-        private IAccountRepository repository;
-        private ITransactionRepository transactionRepository;
+        private IAccountRepository AccountRepository;
+        private ITransactionRepository TransactionRepository;
+        private IListingRepository ListingRepository;
 
         public static List<Listing> cart = new List<Listing>();
 
         public static Account ActiveAccount;
-        public AccountController(IAccountRepository repo, ITransactionRepository transRepo)
+        public AccountController(IAccountRepository AccountRepository, ITransactionRepository TransactionRepository, IListingRepository ListingRepository)
         {
-            repository = repo;
-            transactionRepository = transRepo;
+            this.AccountRepository = AccountRepository;
+            this.TransactionRepository = TransactionRepository;
+            this.ListingRepository = ListingRepository;
         }
         
         public Account GetAccountById(int id) {
-            foreach (Account acc in repository.Accounts) {
+            foreach (Account acc in AccountRepository.Accounts) {
                 if (acc.Id == id)
                 {
                     return acc;
@@ -29,7 +31,7 @@ namespace KiwiCorpSite.Controllers
 
         public Account GetAccountByUsername(string username)
         {
-            foreach (Account acc in repository.Accounts)
+            foreach (Account acc in AccountRepository.Accounts)
             {
                 if (acc.Username == username)
                 {
@@ -40,7 +42,7 @@ namespace KiwiCorpSite.Controllers
         }
 
         public Account GetAccountByReferal(string referal) {
-            foreach (Account acc in repository.Accounts) {
+            foreach (Account acc in AccountRepository.Accounts) {
                 if (acc.ReferalCode == referal) {
                     Console.WriteLine("Found account by referal");
                     return acc;
@@ -59,9 +61,14 @@ namespace KiwiCorpSite.Controllers
         }
 
         public ViewResult Checkout() {
+
             foreach (Listing item in cart) {
-                transactionRepository.NewTransaction(ActiveAccount, item);
+                Console.WriteLine("First Item In Repository: " + ListingRepository.Listings.FirstOrDefault(a => a.ListingID == item.ListingID).Name);
+                TransactionRepository.NewTransaction(ActiveAccount, item);
+                ListingRepository.SellItem(item);
+                
             }
+            
             cart.Clear();
 
             // Check if the user has a referal applied that corresponds to a real user
@@ -72,16 +79,16 @@ namespace KiwiCorpSite.Controllers
                 Account referer = GetAccountByReferal(referee.AppliedReferal);
                 referer.CreditedFunds += 30;
                 referee.AppliedReferal = null;
-                repository.SaveAccount(referee);
-                repository.SaveAccount(referer);
+                AccountRepository.SaveAccount(referee);
+                AccountRepository.SaveAccount(referer);
                 Console.WriteLine("Referal complete");
             }
 
-            return View("AccountList", repository.Accounts);
+            return View("Cart", cart);
         }
 
         public ViewResult AccountList() {
-            return View(repository.Accounts);
+            return View(AccountRepository.Accounts);
         }
 
         public ViewResult AccountCreation() {
@@ -99,8 +106,8 @@ namespace KiwiCorpSite.Controllers
         {
             if (ModelState.IsValid)
             {
-                repository.SaveAccount(acc);
-                return View("AccountList", repository.Accounts);
+                AccountRepository.SaveAccount(acc);
+                return View("AccountList", AccountRepository.Accounts);
             }
             else
             {
@@ -115,6 +122,7 @@ namespace KiwiCorpSite.Controllers
             if (acc == null || acc.Password != attempt.Password) return View("LogInPage");
             else ActiveAccount = acc;
             Console.WriteLine(ActiveAccount.Username + " is the active account");
+            cart.Clear();
             return View("Index");
         }
 
@@ -128,8 +136,8 @@ namespace KiwiCorpSite.Controllers
             if (!ModelState.IsValid) return View("AccountCreation");
             Random rand = new Random(System.DateTime.Now.Millisecond);
             acc.ReferalCode = rand.Next(100000000, 999999999).ToString();
-            repository.SaveAccount(acc);
-            return View("AccountList", repository.Accounts);
+            AccountRepository.SaveAccount(acc);
+            return View("AccountList", AccountRepository.Accounts);
         }
 
         public ViewResult Cart() {
@@ -139,12 +147,12 @@ namespace KiwiCorpSite.Controllers
 
         public ViewResult TransactionHistory() {
             if (ActiveAccount == null) return View("LogInPage");
-            return View(transactionRepository.Transactions);
+            return View(TransactionRepository.Transactions);
         }
 
         public ViewResult Refund(int id) {
-            transactionRepository.RefundTransaction(id);
-            return View("TransactionHistory", transactionRepository.Transactions);
+            TransactionRepository.RefundTransaction(id);
+            return View("TransactionHistory", TransactionRepository.Transactions);
         }
     }
 }

@@ -47,15 +47,19 @@
 				<b>Price:</b>
 				$@Model.Price
 			</div>
-			<form asp-controller="Account" asp-action="AddToCart">
-			<input type="hidden" asp-for="ListingID" value="@Model.ListingID">
-			<input type="hidden" asp-for="CustomerID" value="@Model.CustomerID">
-			<input type="hidden" asp-for="Name" value="@Model.Name">
-			<input type="hidden" asp-for="Description" value="@Model.Description">
-			<input type="hidden" asp-for="Price" value="@Model.Price">
-			<input type="hidden" asp-for="Grade" value="@Model.Grade">
-			<input type = "submit" class="btn btn-primary" value="Add to Cart"/>
-			</form>
+			@if(Model.Sold) {
+				<input type = "submit" class="btn btn-primary" value="Sold" disabled/>
+			} else {
+				<form asp-controller="Account" asp-action="AddToCart">
+				<input type="hidden" asp-for="ListingID" value="@Model.ListingID">
+				<input type="hidden" asp-for="CustomerID" value="@Model.CustomerID">
+				<input type="hidden" asp-for="Name" value="@Model.Name">
+				<input type="hidden" asp-for="Description" value="@Model.Description">
+				<input type="hidden" asp-for="Price" value="@Model.Price">
+				<input type="hidden" asp-for="Grade" value="@Model.Grade">
+				<input type = "submit" class="btn btn-primary" value="Add to Cart"/>
+				</form>
+			}
 		</div>
 	</body>
 </html>
