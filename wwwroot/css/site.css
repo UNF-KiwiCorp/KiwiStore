@@ -26,3 +26,10 @@ body {
 .navbar-nav > li > a {
     font-family: 'Century Gothic';
     font-weight: bold;
+}
+
+h2 {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #960018;
+}

@@ -5,76 +5,79 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KiwiCorpSite
 build_property.RootNamespace = KiwiCorpSite
-build_property.ProjectDir = C:\Users\steve\source\repos\KiwiStore-JoshCodeV2\KiwiStore-JoshCodeV2\
+build_property.ProjectDir = C:\Users\n01486327\source\repos\KiwiStore\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\steve\source\repos\KiwiStore-JoshCodeV2\KiwiStore-JoshCodeV2
+build_property.MSBuildProjectDirectory = C:\Users\n01486327\source\repos\KiwiStore
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Account/AccountCreation.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Account/AccountCreation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50Q3JlYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Account/AccountList.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Account/AccountList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Account/AccountSettings.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Account/AccountSettings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50U2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Account/TransactionHistory.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Account/TransactionHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxUcmFuc2FjdGlvbkhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Home/Index.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Home/Privacy.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Listing/CreateListing.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Listing/CreateListing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGluZ1xDcmVhdGVMaXN0aW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Listing/Listing.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Listing/Listing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGluZ1xMaXN0aW5nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/Browse.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Shared/Browse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEJyb3dzZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/Cart.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Shared/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/Error.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/LogInPage.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Shared/LogInPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExvZ0luUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/_ViewImports.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/_ViewStart.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/steve/source/repos/KiwiStore-JoshCodeV2/KiwiStore-JoshCodeV2/Views/Shared/_Layout.cshtml]
+[C:/Users/n01486327/source/repos/KiwiStore/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7ghl7fk1dj
