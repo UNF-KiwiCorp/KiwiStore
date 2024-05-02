@@ -9,6 +9,7 @@ namespace KiwiCorpSite.Models
 		public int CustomerID { get; set; }
 		public String Name { get; set; }
         public String Description { get; set; }
+        public bool Sold { get; set; }
 		[NotMapped]
         public IFormFile image { get; set; }
 

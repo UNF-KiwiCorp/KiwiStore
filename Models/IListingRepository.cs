@@ -9,5 +9,7 @@ namespace KiwiCorpSite.Models
         public void NewListing(Listing newListing);
 
         public void EditListing(Listing newData);
+
+        public void SellItem(Listing item);
     }
 }

@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<KiwiCorpSite.Models.Transaction>
 @using KiwiCorpSite.Controllers;
+@using KiwiCorpSite.Models;
 @{
     ViewData["Title"] = "TransactionHistory";
     Account ActiveAccount = AccountController.ActiveAccount;
@@ -7,9 +8,6 @@
 
 <h1>TransactionHistory</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -58,7 +56,7 @@
                 @Html.DisplayFor(modelItem => item.Refunded)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Request Refund</a> |
+                <a asp-action="Refund" asp-route-id="@item.Id">Request Refund</a> |
             </td>
         </tr>
         }

@@ -98,6 +98,9 @@ namespace KiwiCorpSite.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
+                    b.Property<bool>("Sold")
+                        .HasColumnType("bit");
+
                     b.HasKey("ListingID");
 
                     b.ToTable("Listings");
