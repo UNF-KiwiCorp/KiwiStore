@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mm4+lopKZNFB4rN4yPm+iD1n2j7nXQzqZhneZ7PZsbkzvj6xgLon77KRZ9SSsSnoH33OHY1rz0onyKz6UrNvHA==",
+  "dgSpecHash": "p8QxlIfCqfgEos7UVXX7rJu+Fxp4JIFepilOU+Nla77VfTmgwjxIy0nyTeAXcl/pb3aBJENZqofi2vGBrABb8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\n01486327\\source\\repos\\KiwiStore\\KiwiCorpSite.csproj",
+  "projectFilePath": "C:\\Users\\n01486327\\Source\\Repos\\KiwiStore\\KiwiCorpSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\n01486327\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\n01486327\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

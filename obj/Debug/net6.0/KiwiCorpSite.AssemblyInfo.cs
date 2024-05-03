@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KiwiCorpSite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a9399767bab1fc2322bc1bc060102e33878f368")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97d1f05a5f6b0e9f2017a2a18acb7f53627b4767")]
 [assembly: System.Reflection.AssemblyProductAttribute("KiwiCorpSite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KiwiCorpSite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

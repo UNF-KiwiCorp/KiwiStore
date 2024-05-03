@@ -33,3 +33,31 @@ h2 {
     font-weight: bold;
     color: #960018;
 }
+
+h1 {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #960018;
+}
+
+h4 {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    color: #960018;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+.accordion-button {
+    color: #960018;
+}
+
+    .accordion-button:hover,
+    .accordion-button:active,
+    .accordion-button:focus {
+        color: #960018;
+    }
+
+.accordion-body {
+    color: #960018;
+}

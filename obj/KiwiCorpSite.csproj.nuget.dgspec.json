@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\n01486327\\source\\repos\\KiwiStore\\KiwiCorpSite.csproj": {}
+    "C:\\Users\\n01486327\\Source\\Repos\\KiwiStore\\KiwiCorpSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\n01486327\\source\\repos\\KiwiStore\\KiwiCorpSite.csproj": {
+    "C:\\Users\\n01486327\\Source\\Repos\\KiwiStore\\KiwiCorpSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\n01486327\\source\\repos\\KiwiStore\\KiwiCorpSite.csproj",
+        "projectUniqueName": "C:\\Users\\n01486327\\Source\\Repos\\KiwiStore\\KiwiCorpSite.csproj",
         "projectName": "KiwiCorpSite",
-        "projectPath": "C:\\Users\\n01486327\\source\\repos\\KiwiStore\\KiwiCorpSite.csproj",
+        "projectPath": "C:\\Users\\n01486327\\Source\\Repos\\KiwiStore\\KiwiCorpSite.csproj",
         "packagesPath": "C:\\Users\\n01486327\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\n01486327\\source\\repos\\KiwiStore\\obj\\",
+        "outputPath": "C:\\Users\\n01486327\\Source\\Repos\\KiwiStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\n01486327\\AppData\\Roaming\\NuGet\\NuGet.Config",

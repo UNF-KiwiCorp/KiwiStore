@@ -4,7 +4,7 @@
     ViewData["Title"] = "AccountCreation";
 }
 
-<h1>AccountCreation</h1>
+<h1>Account Creation</h1>
 
 <h4>Account</h4>
 <hr />
@@ -51,14 +51,15 @@
                 <input asp-for="AppliedReferal" class="form-control" />
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-danger" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="AccountList">Back to List</a>
+    
+<a class="btn btn-primary text-white btn-sm" asp-controller="Home" asp-action="Index" style="margin-top: 20px;">Back to Home</a>
 </div>
 
 @section Scripts {
