@@ -13,4 +13,4 @@ Like Mercari, KiwiStore serves as a marketplace where individuals can buy, sell,
 **🥝 Future Implementation**
 
 It is important to note that the KiwiScore system is not currently implemented in this version of the project. However, if the project were to go live, the integration of the KiwiScore system would be a key feature, further enhancing the platform's ability to facilitate secure and reliable transactions for collectible enthusiasts.
-![Untitled design (19)](https://github.com/UNF-KiwiCorp/KiwiStore/assets/66034863/7213c85d-6f66-42cd-84b4-22c275e87b59)
+![Untitled design](https://github.com/UNF-KiwiCorp/KiwiStore/assets/66034863/9a5ef03d-e395-4edd-970a-e9ec4cacf8c8)
